@@ -1,5 +1,4 @@
 import os
-import numpy as np
 import json
 import random
 from pathlib import Path
@@ -33,15 +32,15 @@ def analyze_soil(image, language='en'):
         # Generate a "prediction" (random for demo purposes)
         if image is not None:
             # For demo, we'll simulate a prediction
-            soil_type = np.random.randint(0, 4)  # Random soil type between 0-3
+            soil_type = random.randint(0, 3)  # Random soil type between 0-3
             
             # Simulate soil properties
             properties = {
-                "ph": round(np.random.uniform(5.5, 7.5), 1),
-                "nitrogen": round(np.random.uniform(10, 40), 0),
-                "phosphorus": round(np.random.uniform(5, 20), 0),
-                "potassium": round(np.random.uniform(5, 20), 0),
-                "organic_matter": round(np.random.uniform(1, 5), 1)
+                "ph": round(random.uniform(5.5, 7.5), 1),
+                "nitrogen": round(random.uniform(10, 40), 0),
+                "phosphorus": round(random.uniform(5, 20), 0),
+                "potassium": round(random.uniform(5, 20), 0),
+                "organic_matter": round(random.uniform(1, 5), 1)
             }
             
             result = {

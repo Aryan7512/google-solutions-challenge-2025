@@ -1,15 +1,9 @@
 import os
-import numpy as np
 from werkzeug.utils import secure_filename
 from flask import current_app
 import requests
 from backend.utils.config import Config
 from backend.utils.translations import get_text
-
-try:
-    import cv2
-except ImportError:
-    print("OpenCV (cv2) is not available. Using fallback image processing.")
 
 def allowed_file(filename):
     """Check if the file has an allowed extension"""
@@ -31,14 +25,14 @@ def save_uploaded_file(file):
 def preprocess_image(image_path, target_size=(224, 224)):
     """
     A simplified version that just verifies the image exists
-    and returns a placeholder for the demo
+    and returns a placeholder for the demo - no OpenCV or NumPy required
     """
     if not os.path.exists(image_path):
         return None
     
-    # Just return a dummy array for demo purposes
+    # Just return a dummy value (True) for demo purposes
     # No actual image processing needed for the MVP demo
-    return np.ones((1,)) # Dummy array, just needs to be non-None
+    return True
 
 def get_weather_data(lat, lon):
     """Get weather data for a location"""

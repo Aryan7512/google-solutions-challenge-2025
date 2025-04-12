@@ -1,4 +1,4 @@
-# ShetkarAI: Empowering Indian Farmers with AI (MVP Version)
+# KisanSaathi: Empowering Indian Farmers with AI (MVP Version)
 
 ShetkarAI is an AI-powered mobile application designed to empower Indian smallholder farmers through accessible technology. This project aims to improve agricultural productivity, sustainability, and economic outcomes for farmers.
 

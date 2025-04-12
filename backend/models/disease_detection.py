@@ -1,5 +1,4 @@
 import os
-import numpy as np
 import json
 import random
 from pathlib import Path
@@ -35,8 +34,8 @@ def predict_disease(image, language='en'):
         # Generate a "prediction" (random for demo purposes)
         if image is not None:
             # For demo, we'll simulate a prediction
-            predicted_class = np.random.randint(0, 5)  # Random class between 0-4
-            confidence = np.random.uniform(0.7, 0.99)  # Random confidence
+            predicted_class = random.randint(0, 4)  # Random class between 0-4
+            confidence = random.uniform(0.7, 0.99)  # Random confidence
             
             result = {
                 "disease": translations[language][predicted_class],

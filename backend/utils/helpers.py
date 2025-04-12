@@ -1,11 +1,15 @@
 import os
-import cv2
 import numpy as np
 from werkzeug.utils import secure_filename
 from flask import current_app
 import requests
 from backend.utils.config import Config
 from backend.utils.translations import get_text
+
+try:
+    import cv2
+except ImportError:
+    print("OpenCV (cv2) is not available. Using fallback image processing.")
 
 def allowed_file(filename):
     """Check if the file has an allowed extension"""

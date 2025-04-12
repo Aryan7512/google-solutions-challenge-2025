@@ -6,4 +6,5 @@ Werkzeug==2.3.7
 pymongo==4.5.0
 requests==2.31.0
 gunicorn==21.2.0
-opencv-python-headless==4.8.1
+numpy==2.2.4
+opencv-python==4.8.1.78
